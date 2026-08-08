@@ -9,27 +9,27 @@ def add_contact():
         name  = input ("Enter name: ").title()
         #allows names containing letters and spaces
         if not name.replace(" ", "").isalpha():
-            print("Please enter a valid name.")
+            print("Please enter a valid name.\n")
         elif name in contacts:
-            print("Name already exists.")     
+            print("Name already exists.\n")     
         else:
             break  
 
     while True:
         phone = input ("Enter phone no (11 digits only , without space or hyphen): ")
         if not phone.isdigit() or len(phone)!=11:
-            print("Please enter a valid phone number.")
+            print("Please enter a valid phone number.\n")
         elif any(contact["Phone"] == phone for contact in contacts.values()):
-            print("Phone no: already exists.")    
+            print("Phone no: already exists.\n")    
         else:
             break   
 
     while True:
         email = input ("Enter email address (e.g. abc@gmail.com): ")
         if "@" not in email or ".com" not in email:
-            print("Please enter a valid email.")
+            print("Please enter a valid email.\n")
         elif any(contact["Email"] == email for contact in contacts.values()):
-            print("Email already exists.")     
+            print("Email already exists.\n")     
         else:
             break    
 
@@ -38,7 +38,7 @@ def add_contact():
             "Phone" : phone,
             "Email" : email}
         
-    print("Contact added successfully!")  
+    print("Contact added successfully!\n")  
 
 # ================================== VIEW FUNCTION ==================================
 def view_contacts():
@@ -65,7 +65,7 @@ def search_contact():
             print(f"{key} : {value}")
 
     else:
-        print("Contact not found!")
+        print("Contact not found!\n")
 
 # ================================== UPDATE FUNCTION ==================================
 def update_contact():
@@ -78,11 +78,11 @@ def update_contact():
             new_phone = input("Enter new phone no (11 digits only, without space or hyphen): ")
 
             if not new_phone.isdigit() or len(new_phone) != 11:
-                print("Please enter a valid phone number.")
+                print("Please enter a valid phone number.\n")
             elif any(contact["Phone"] == new_phone
                     for contact_name, contact in contacts.items()
                     if contact_name != name):
-                print("Phone no. already exists.")
+                print("Phone no. already exists.\n")
             else:
                 contacts[name]["Phone"] = new_phone
                 break
@@ -91,19 +91,19 @@ def update_contact():
             new_email = input("Enter new email address: ")
 
             if "@" not in new_email or ".com" not in new_email:
-                print("Please enter a valid email.")
+                print("Please enter a valid email.\n")
             elif any(contact["Email"] == new_email
                     for contact_name, contact in contacts.items()
                     if contact_name != name):
-                print("Email already exists.")
+                print("Email already exists.\n")
             else:
                 contacts[name]["Email"] = new_email
                 break
 
-        print("Contact updated successfully!")
+        print("Contact updated successfully!\n")
 
     else:
-        print("Contact not found!")
+        print("Contact not found!\n")
 
 # ==================================== DELETE FUNCTION ====================================   
 def delete_contact():
@@ -111,10 +111,10 @@ def delete_contact():
 
     if name in contacts:
         del contacts[name]
-        print("Contact deleted successfully!")
+        print("Contact deleted successfully!\n")
 
     else:
-        print("Contact not found!")      
+        print("Contact not found!\n")      
 
 # ==================================== EXIT FUNCTION ====================================
 def exit_program():
@@ -137,7 +137,7 @@ def main():
         choice = input("Enter your choice (1-6): ")
 
         if not choice.isdigit() or not 1 <= int(choice) <= 6:
-            print("Invalid choice! Please choose from 1 to 6.")
+            print("Invalid choice! Please choose from 1 to 6.\n")
             continue
 
         match choice:
