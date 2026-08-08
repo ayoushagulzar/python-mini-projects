@@ -45,7 +45,7 @@ def view_contacts():
     if not contacts:
         print("No contacts found!")
         return
-    
+    print("\n----------- Contact list -----------\n")
     for name, contact in contacts.items():
         print(f"\nName = {name}")
 
