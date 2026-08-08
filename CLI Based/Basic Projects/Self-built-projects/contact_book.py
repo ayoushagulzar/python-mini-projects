@@ -2,7 +2,7 @@ import time
 
 contacts = {}
 
-# ======================== ADD FUNCTION ========================
+# ================================== ADD FUNCTION ==================================
 def add_contact():
 
     while True:
@@ -40,7 +40,7 @@ def add_contact():
         
     print("Contact added successfully!")  
 
-# ======================== VIEW FUNCTION ========================
+# ================================== VIEW FUNCTION ==================================
 def view_contacts():
     if not contacts:
         print("No contacts found!")
@@ -52,7 +52,7 @@ def view_contacts():
         for key, value in contact.items():
             print(f"{key} : {value}")
 
-# ======================== SEARCH FUNCTION ========================
+# ================================== SEARCH FUNCTION ==================================
 def search_contact():
     name = input("Enter the contact name you want to search: ").title()
 
@@ -67,7 +67,7 @@ def search_contact():
     else:
         print("Contact not found!")
 
-# ======================== UPDATE FUNCTION ========================
+# ================================== UPDATE FUNCTION ==================================
 def update_contact():
     name = input("Enter the contact name you want to update: ").title()
 
@@ -105,7 +105,7 @@ def update_contact():
     else:
         print("Contact not found!")
 
-# ======================== DELETE FUNCTION ========================   
+# ==================================== DELETE FUNCTION ====================================   
 def delete_contact():
     name = input("Enter the contact name you want to delete: ").title()
 
@@ -116,11 +116,11 @@ def delete_contact():
     else:
         print("Contact not found!")      
 
-# ======================== EXIT FUNCTION ========================
+# ==================================== EXIT FUNCTION ====================================
 def exit_program():
     print("Exiting....")
 
-# ======================== MAIN FUNCTION ========================
+# ==================================== MAIN FUNCTION ====================================
 def main():
     is_running = True
 
