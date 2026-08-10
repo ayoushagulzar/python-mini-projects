@@ -35,9 +35,7 @@ A console-based Hangman game built in Python, where the player attempts to guess
 ---
 
 ## 📚 Source
-
-**Tutorial:** Bro Code --- Python Full Course
-**Platform:** YouTube
+* Bro Code --- Python Full Course
 
 
 ## 🎯 Purpose
