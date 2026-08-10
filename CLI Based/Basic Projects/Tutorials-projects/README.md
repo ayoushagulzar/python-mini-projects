@@ -1,6 +1,6 @@
 # Tutorial Projects
 
-A collection of Python projects implemented while following the **Bro Code Python Full Course** tutorial, with personal modifications and experimentation.
+A collection of basic Python projects implemented while following the **Bro Code Python Full Course** tutorial, with personal modifications and experimentation.
 
 --- 
 
